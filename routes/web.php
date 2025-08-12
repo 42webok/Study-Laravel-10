@@ -13,28 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get("home" , function(){
-//     return "Helo Route";
-// });
+// Topic No 1 : how to create basic routes 
 
+// syntax ----------------
 
-// Route::get("/wel" , function(){
-//     return view("home");
-// });
-
-
-// Route::get("/wel" , function(){
-//     return view("home");
-// })->name("dashboard");
-
-
-// route grouping
-Route::prefix("/admin")->group(function(){
-    Route::get("/dashboard" , function(){
-        return "Admin Dashboard";
-    });
-    Route::get("/user" , function(){
-        return "Admin User";
-    });
-
+// calling simple route 
+Route::get('/home' , function(){
+    return 'welcome to home page';
 });
+
+// calling view with route 
+
+Route::get('/laravel' , function(){
+    return view('home');
+});
+
+// short way to writing route
+
+Route::view('short' , 'home');
+
+// other file  calling
+
+Route::view('new' , 'about');
+
+
+

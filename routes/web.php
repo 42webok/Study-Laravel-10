@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Topic No 2 : how to create Parameter routes 
+// Topic No 2 : how to create Parameter routes ====================================================================
 
 // if we not put parameter in route then it will throw error
 // Route::get('parameter/{id}' , function($id){
@@ -82,3 +82,39 @@ use Illuminate\Support\Facades\Route;
 // Route::get('parameter/{id?}' , function($id = ''){
 //     return $id;
 // })->whereIn('id' , ['Ahmad' , 'Ali' , 'hassan' ]);
+
+
+// Topic no 3 : how to create Naming && Group routes ==============================================================================
+
+// this is default route calling on default page load
+
+
+// Route::get('/' , function(){
+//     return view('home');
+// });
+
+
+// this is route for home page we can call it in blade template like this {{ route('homePage') }}
+
+// Route::get('/abc' , function(){
+//     return view('home');
+// })->name('homePage');
+
+
+// route gouping start here  ... This URL will be home/about OR home/contact 
+
+Route::prefix('home')->group(function(){
+    Route::get('/' , function(){
+        return 'home index';
+    });
+     Route::get('about' , function(){
+        return 'home about';
+    });
+     Route::get('contact' , function(){
+        return 'home contact';
+    });
+});
+
+// --------------------------------------------------------------------------------------------------------
+
+// Route Basic to Advance complete here ------==============================================================================

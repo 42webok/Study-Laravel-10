@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel Route</title>
-</head>
-<body>
-      <h1>Hello Laravel ! <a href="new">Go to about page </a></h1>
-</body>
-</html>
+
+
+
+
+
+<a href="{{route('homePage')}}">Go to main page !</a>

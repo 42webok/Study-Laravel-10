@@ -103,18 +103,40 @@ use Illuminate\Support\Facades\Route;
 
 // route gouping start here  ... This URL will be home/about OR home/contact 
 
-Route::prefix('home')->group(function(){
-    Route::get('/' , function(){
-        return 'home index';
-    });
-     Route::get('about' , function(){
-        return 'home about';
-    });
-     Route::get('contact' , function(){
-        return 'home contact';
-    });
-});
+// Route::prefix('home')->group(function(){
+//     Route::get('/' , function(){
+//         return 'home index';
+//     });
+//      Route::get('about' , function(){
+//         return 'home about';
+//     });
+//      Route::get('contact' , function(){
+//         return 'home contact';
+//     });
+// });
 
 // --------------------------------------------------------------------------------------------------------
 
 // Route Basic to Advance complete here ------==============================================================================
+
+
+// Topic No 4 : Blade Template Engine ======================================================================================================
+
+// if we want to send any parm in view so we use with method of view function 
+
+
+// Important Notes :::
+// 1 : Each File will save with the extension .blade.php like file_name.blade.php 
+
+
+
+
+
+// Route::get('/{value?}' , function($value = ''){
+//     return view('home')->with(['value' => $value]);
+// });
+
+Route::get('/' , function($value = ''){
+    return view('welcome');
+});
+

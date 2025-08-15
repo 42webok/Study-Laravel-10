@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laravel Theme Blade</title>
 </head>
 <body>
-      <h1>Hello Php ! <a href="short">Go to home page </a></h1>
-    
-</body>
-</html>
+ <h1>Header</h1>   

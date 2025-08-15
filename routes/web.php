@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -136,7 +137,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('home')->with(['value' => $value]);
 // });
 
-Route::get('/' , function($value = ''){
-    return view('welcome');
-});
+// Route::get('/' , function($value = ''){
+//     return view('welcome');
+// });
 
+// Topic No 5 : Controller ======================================================================================================
+
+// path = > app/http/controllers/....
+// we can also make controller by atrisan cammand 
+// php artisan make:controller NameController
+
+
+Route::get('/main' , [TestController::class , 'index']);

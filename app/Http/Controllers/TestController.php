@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 class TestController extends Controller
 {
     public function index(){
-        return 'helo from controller';
+        return view('welcome');
+    }
+    public function about(){
+        return view('welcome');
+    }
+    public function contact(){
+        return view('welcome');
     }
 }

@@ -148,4 +148,21 @@ use App\Http\Controllers\TestController;
 // php artisan make:controller NameController
 
 
-Route::get('/main' , [TestController::class , 'index']);
+// Route::get('/main' , [TestController::class , 'index']);
+
+
+// Topic No 6 : Advance controller  ======================================================================================================
+
+// As we have one controller file and in it we have 3 functions son we can group the function in one controller file by using the following method
+
+
+// Route::controller(TestController::class)->group(function(){
+//     Route::get('/main' , 'index');
+//     Route::get('/about' ,  'about');
+//     Route::get('/contact' , 'contact');
+// });
+
+
+// we have an invoke cntroller that is used to invoke the controller method (call only one function immediatly )
+// we have also an resourses controller that has built in methods of crud operation 
+

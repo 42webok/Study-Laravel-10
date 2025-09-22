@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\Register;
+use App\Models\Test_model;
 
 /*
 |--------------------------------------------------------------------------
@@ -166,3 +168,26 @@ use App\Http\Controllers\TestController;
 // we have an invoke cntroller that is used to invoke the controller method (call only one function immediatly )
 // we have also an resourses controller that has built in methods of crud operation 
 
+
+// Tpoic No 7 : Migration and table  ======================================================================================================
+// Migration is used to create table in database 
+// we can create table by using the following command
+// php artisan make:migration create_table_name_table 
+// we can also create table by using the following command
+// php artisan make:migration create_table_name_table --create=table_name
+
+
+// Topic number 8   : Models 
+
+// Route::get('/' , function(){
+//     $data = Test_model::get();
+//     dd($data->toArray());
+// });
+
+// Topic number 9 : sending from data into controller 
+
+Route::get('/' , [Register::class , 'index']);
+Route::get('view' , [Register::class , 'view']);
+
+
+Route::post('add' , [Register::class , 'send']);

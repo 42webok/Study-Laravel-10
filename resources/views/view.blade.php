@@ -10,7 +10,17 @@
 </head>
 
 <body>
+    <header class="p-5 bg-dark">
+        <h2 class="text-center text-light">Laravel Crud</h2>
+    </header>
     <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <a href="{{url('/add')}}" class="btn btn-info">
+                Add Data
+            </a>
+            </div>
+        </div>
         <table class="table">
             <thead>
                 <tr>
@@ -19,6 +29,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Number</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +40,10 @@
                     <td>{{$val['email']}}</td>
                     <td>{{$val['number']}}</td>
                     <td>{{$val['created_at']}}</td>
+                    <td>
+                        <a href="{{url('editFormData' , ['user_id'=>$val['id']])}}" class="btn btn-success btn-sm">Edit</a>
+                        <a href="{{url('delete' , ['user_id'=>$val['id']])}}" class="btn btn-danger btn-sm">Delete</a>
+                   </td>
                 </tr>
                   @endforeach
             </tbody>

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
-use App\Http\Controllers\Register;
+use App\Http\Controllers\Crud;
 use App\Models\Test_model;
 
 /*
@@ -186,8 +186,16 @@ use App\Models\Test_model;
 
 // Topic number 9 : sending from data into controller 
 
-Route::get('/' , [Register::class , 'index']);
-Route::get('view' , [Register::class , 'view']);
+// Route::get('/' , [Register::class , 'index']);
+// Route::get('view' , [Register::class , 'view']);
 
 
-Route::post('add' , [Register::class , 'send']);
+// Route::post('add' , [Register::class , 'send']);
+
+
+Route::get('/' , [Crud::class , 'index']);
+Route::get('add' , [Crud::class , 'insert']);
+Route::post('addFormData' , [Crud::class , 'addData']);
+Route::get('editFormData/{user_id}' , [Crud::class , 'editData']);
+Route::post('updateFormData/{user_id}' , [Crud::class , 'updateData']);
+Route::get('delete/{user_id}' , [Crud::class , 'delete']);
